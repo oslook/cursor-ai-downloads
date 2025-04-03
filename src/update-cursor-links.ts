@@ -55,8 +55,8 @@ interface VersionHistory {
 
 const PLATFORMS: PlatformMap = {
   windows: {
-    platforms: ['win32-x64', 'win32-arm64'],
-    readableNames: ['win32-x64', 'win32-arm64'],
+    platforms: ['win32-x64-user', 'win32-arm64-user', 'win32-x64-system', 'win32-arm64-system'],
+    readableNames: ['win32-x64-user', 'win32-arm64-user', 'win32-x64-system', 'win32-arm64-system'],
     section: 'Windows Installer'
   },
   mac: {
@@ -76,8 +76,8 @@ const PLATFORMS: PlatformMap = {
  */
 function extractVersion(url: string): string {
   // For Windows
-  const winMatch = url.match(/CursorUserSetup-[^-]+-([0-9.]+)\.exe/);
-  if (winMatch && winMatch[1]) return winMatch[1];
+  const winMatch = url.match(/Cursor(User|)Setup-[^-]+-([0-9.]+)\.exe/);
+  if (winMatch && winMatch[2]) return winMatch[2];
   
   // For other URLs, try to find version pattern
   const versionMatch = url.match(/[0-9]+\.[0-9]+\.[0-9]+/);
@@ -99,8 +99,17 @@ function formatDate(date: Date): string {
  */
 async function fetchLatestDownloadUrl(platform: string): Promise<string | null> {
   try {
+    let apiPlatform = platform;
+    let isSystemVersion = false;
+    
+    // Handle system version URLs
+    if (platform.endsWith('-system')) {
+      apiPlatform = platform.replace('-system', '');
+      isSystemVersion = true;
+    }
+    
     // Simple fetch without complex retry logic
-    const response = await fetch(`https://www.cursor.com/api/download?platform=${platform}&releaseTrack=latest`, {
+    const response = await fetch(`https://www.cursor.com/api/download?platform=${apiPlatform}&releaseTrack=latest`, {
       headers: {
         'User-Agent': 'Cursor-Version-Checker',
         'Cache-Control': 'no-cache',
@@ -114,7 +123,13 @@ async function fetchLatestDownloadUrl(platform: string): Promise<string | null> 
     }
     
     const data = await response.json() as DownloadResponse;
-    return data.downloadUrl;
+    let downloadUrl = data.downloadUrl;
+    
+    if (isSystemVersion) {
+      downloadUrl = downloadUrl.replace('user-setup/CursorUserSetup', 'system-setup/CursorSetup');
+    }
+    
+    return downloadUrl;
   } catch (error) {
     console.error(`Error fetching download URL for platform ${platform}:`, error instanceof Error ? error.message : 'Unknown error');
     return null;
