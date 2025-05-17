@@ -247,6 +247,10 @@ function generateDownloadBadge(platform: PlatformType, url: string): string {
   return `<a href="${url}"><img src="https://img.shields.io/badge/${encodedLabel}-Download-${config.color}?style=for-the-badge&logo=${config.logo}&logoColor=white" alt="${config.label}"></a>`;
 }
 
+function generateDownloadLink(platform: PlatformType, url: string): string {
+  return `<a href="${url}">${platform}</a>`;
+}
+
 /**
  * Generate the latest version card content
  */
@@ -377,7 +381,7 @@ function generateTableRow(version: string, date: string, platforms: { [platform:
   const macPlatforms = ['darwin-universal', 'darwin-x64', 'darwin-arm64'];
   const macLinksList = macPlatforms.map(platform => {
     if (platforms[platform]) {
-      return generateDownloadBadge(platform as PlatformType, platforms[platform]);
+      return generateDownloadLink(platform as PlatformType, platforms[platform]);
     }
     return null;
   }).filter(Boolean);
@@ -388,7 +392,7 @@ function generateTableRow(version: string, date: string, platforms: { [platform:
   const winPlatforms = ['win32-x64-system', 'win32-arm64-system', 'win32-x64-user', 'win32-arm64-user', 'win32-x64', 'win32-arm64'];
   const winLinksList = winPlatforms.map(platform => {
     if (platforms[platform]) {
-      return generateDownloadBadge(platform as PlatformType, platforms[platform]);
+      return generateDownloadLink(platform as PlatformType, platforms[platform]);
     }
     return null;
   }).filter(Boolean);
@@ -399,7 +403,7 @@ function generateTableRow(version: string, date: string, platforms: { [platform:
   const linuxPlatforms = ['linux-x64', 'linux-arm64'];
   const linuxLinksList = linuxPlatforms.map(platform => {
     if (platforms[platform]) {
-      return generateDownloadBadge(platform as PlatformType, platforms[platform]);
+      return generateDownloadLink(platform as PlatformType, platforms[platform]);
     }
     return null;
   }).filter(Boolean);
