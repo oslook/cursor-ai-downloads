@@ -1,6 +1,23 @@
 {
   "versions": [
     {
+      "version": "1.3.1",
+      "date": "2025-07-24",
+      "platforms": {
+        "darwin-universal": "https://downloads.cursor.com/production/4e81c182aa53ca18ee09324336db9c760974e443/darwin/universal/Cursor-darwin-universal.dmg",
+        "darwin-x64": "https://downloads.cursor.com/production/4e81c182aa53ca18ee09324336db9c760974e443/darwin/x64/Cursor-darwin-x64.dmg",
+        "darwin-arm64": "https://downloads.cursor.com/production/4e81c182aa53ca18ee09324336db9c760974e443/darwin/arm64/Cursor-darwin-arm64.dmg",
+        "win32-x64-user": "https://downloads.cursor.com/production/4e81c182aa53ca18ee09324336db9c760974e443/win32/x64/user-setup/CursorUserSetup-x64-1.3.1.exe",
+        "win32-arm64-user": "https://downloads.cursor.com/production/4e81c182aa53ca18ee09324336db9c760974e443/win32/arm64/user-setup/CursorUserSetup-arm64-1.3.1.exe",
+        "win32-x64-system": "https://downloads.cursor.com/production/4e81c182aa53ca18ee09324336db9c760974e443/win32/x64/system-setup/CursorSetup-x64-1.3.1.exe",
+        "win32-arm64-system": "https://downloads.cursor.com/production/4e81c182aa53ca18ee09324336db9c760974e443/win32/arm64/system-setup/CursorSetup-arm64-1.3.1.exe",
+        "win32-x64": "https://downloads.cursor.com/production/4e81c182aa53ca18ee09324336db9c760974e443/win32/x64/system-setup/CursorSetup-x64-1.3.1.exe",
+        "win32-arm64": "https://downloads.cursor.com/production/4e81c182aa53ca18ee09324336db9c760974e443/win32/arm64/system-setup/CursorSetup-arm64-1.3.1.exe",
+        "linux-x64": "https://downloads.cursor.com/production/4e81c182aa53ca18ee09324336db9c760974e443/linux/x64/Cursor-1.3.1-x86_64.AppImage",
+        "linux-arm64": "https://downloads.cursor.com/production/4e81c182aa53ca18ee09324336db9c760974e443/linux/arm64/Cursor-1.3.1-aarch64.AppImage"
+      }
+    },
+    {
       "version": "1.3.0",
       "date": "2025-07-23",
       "platforms": {
@@ -1401,19 +1418,6 @@
         "win32-arm64": "https://downloader.cursor.sh/builds/24111460bf2loz1/windows/nsis/arm64",
         "linux-x64": "https://downloader.cursor.sh/builds/24111460bf2loz1/linux/appImage/x64",
         "linux-arm64": "https://downloader.cursor.sh/builds/24111460bf2loz1/linux/appImage/arm64"
-      }
-    },
-    {
-      "version": "0.42.4",
-      "date": "2024-10-29",
-      "platforms": {
-        "darwin-universal": "https://downloader.cursor.sh/builds/2410291z3bdg1dy/mac/installer/universal",
-        "darwin-x64": "https://downloader.cursor.sh/builds/2410291z3bdg1dy/mac/installer/x64",
-        "darwin-arm64": "https://downloader.cursor.sh/builds/2410291z3bdg1dy/mac/installer/arm64",
-        "win32-x64": "https://downloader.cursor.sh/builds/2410291z3bdg1dy/windows/nsis/x64",
-        "win32-arm64": "https://downloader.cursor.sh/builds/2410291z3bdg1dy/windows/nsis/arm64",
-        "linux-x64": "https://downloader.cursor.sh/builds/2410291z3bdg1dy/linux/appImage/x64",
-        "linux-arm64": "https://downloader.cursor.sh/builds/2410291z3bdg1dy/linux/appImage/arm64"
       }
     }
   ]
