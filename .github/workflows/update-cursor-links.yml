@@ -14,6 +14,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      
+      - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        repository: oslook/cursor-download-hub
+        token: ${{ secrets.API_TOKEN_GITHUB }}
+        ref: main
+        path: output/cursor-download-hub
         
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -44,3 +52,19 @@ jobs:
           git add README.md version-history.json
           git commit -m "Update Cursor download links"
           git push 
+
+      - name: copy file
+        run: cp -rf version-history.json output/cursor-download-hub/public/
+
+      - name: Pushes to another repository
+          uses: cpina/github-action-push-to-another-repository@main
+          env:
+            API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          with:
+            source-directory: 'output/cursor-download-hub'
+            destination-github-username: "oslook"
+            destination-repository-name: 'cursor-download-hub'
+            user-email: 41898282+github-actions[bot]@users.noreply.github.com
+            user-name: github-actions[bot]
+            commit-message: 'Auto updated'
+            target-branch: main
