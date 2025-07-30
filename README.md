@@ -28,7 +28,7 @@
 🔍 head over to [Cursor Download Hub (cursor.uuid.site)](https://cursor.uuid.site) perform a quick search version history.
 
 > **Could you please help me by giving your feedback on this product? Your opinion is very valuable to us. Thank you!**
-<a href="https://www.producthunt.com/products/webp-converter-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-webp&#0045;converter&#0045;5" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=999206&theme=light&t=1753890148709" alt="WebP&#0032;Converter - Free&#0032;online&#0032;webp&#0032;image&#0032;converter | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+> <a href="https://www.producthunt.com/products/webp-converter-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-webp&#0045;converter&#0045;5" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=999206&theme=light&t=1753890148709" alt="WebP&#0032;Converter - Free&#0032;online&#0032;webp&#0032;image&#0032;converter | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 ---
 
