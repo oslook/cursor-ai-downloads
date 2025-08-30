@@ -507,9 +507,9 @@ List some key features and the versions they were introduced in for reference wh
 <a href="https://downloads.cursor.com/production/dd05130a0bf8d5f1a5372e6e6bb7c4184786eaa9/win32/arm64/system-setup/CursorSetup-arm64-1.4.4.exe"><img src="https://img.shields.io/badge/Windows%20ARM64-Download-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows ARM64"></a>
 
 #### macOS
-<a href="https://downloads.cursor.com/production/e50823e9ded15fddfd743c7122b4724130c25df8/darwin/universal/Cursor-darwin-universal.dmg"><img src="https://img.shields.io/badge/macOS%20Universal-Download-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS Universal"></a>
-<a href="https://downloads.cursor.com/production/e50823e9ded15fddfd743c7122b4724130c25df8/darwin/x64/Cursor-darwin-x64.dmg"><img src="https://img.shields.io/badge/macOS%20Intel-Download-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS Intel"></a>
-<a href="https://downloads.cursor.com/production/e50823e9ded15fddfd743c7122b4724130c25df8/darwin/arm64/Cursor-darwin-arm64.dmg"><img src="https://img.shields.io/badge/macOS%20Apple%20Silicon-Download-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS Apple Silicon"></a>
+<a href="https://downloads.cursor.com/production/dd05130a0bf8d5f1a5372e6e6bb7c4184786eaa9/darwin/universal/Cursor-darwin-universal.dmg"><img src="https://img.shields.io/badge/macOS%20Universal-Download-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS Universal"></a>
+<a href="https://downloads.cursor.com/production/dd05130a0bf8d5f1a5372e6e6bb7c4184786eaa9/darwin/x64/Cursor-darwin-x64.dmg"><img src="https://img.shields.io/badge/macOS%20Intel-Download-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS Intel"></a>
+<a href="https://downloads.cursor.com/production/dd05130a0bf8d5f1a5372e6e6bb7c4184786eaa9/darwin/arm64/Cursor-darwin-arm64.dmg"><img src="https://img.shields.io/badge/macOS%20Apple%20Silicon-Download-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS Apple Silicon"></a>
 
 #### Linux
 <a href="https://downloads.cursor.com/production/dd05130a0bf8d5f1a5372e6e6bb7c4184786eaa9/linux/x64/Cursor-1.4.4-x86_64.AppImage"><img src="https://img.shields.io/badge/Linux%20x64-Download-FCC624?style=for-the-badge&logo=linux&logoColor=white" alt="Linux x64"></a>
