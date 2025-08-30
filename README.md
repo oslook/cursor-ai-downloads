@@ -32,12 +32,12 @@
 
 ## 📖 Table of Contents
 
-- [❓ What is Cursor?](#what-is-cursor)
-- [🔮 Why list the download links?](#why-list-the-download-links)
-- [🚀 Cursor AI's Changelog](#cursor-changelog)
-- [⏬ Download Links for All Versions](#all-version-download-links)
-- [📜 License](#-license)
-- [☕ Support This Project](#support-this-project)
+- [Introduction to Cursor](#what-is-cursor)
+- [Rationale for Providing Download Links](#why-list-the-download-links)
+- [Changelog for Cursor AI](#cursor-changelog)
+- [Comprehensive Download Links](#all-version-download-links)
+- [License Information](#-license)
+- [Contributing and Support](#support-this-project)
 
 ---
 
