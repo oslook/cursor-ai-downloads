@@ -38,7 +38,10 @@ jobs:
         
       - name: Run update script
         run: bun src/update-cursor-links.ts
-        
+
+      - name: Run update script
+        run: ./scripts/download_all_cursors.sh version-history.json 
+
       - name: Check for changes
         id: git-check
         run: |
@@ -49,7 +52,7 @@ jobs:
         run: |
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
-          git add README.md version-history.json
+          git add README.md version-history.json cursor_products
           git commit -m "Update Cursor download links"
           git push 
 

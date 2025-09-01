@@ -33,3 +33,5 @@ yarn-error.log*
 .DS_Store
 Thumbs.db 
 *.backup
+squashfs-root
+*AppImage
