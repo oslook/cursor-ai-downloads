@@ -1,6 +1,6 @@
 <p align="right">
    <a href="https://www.buymeacoffee.com/oslook" target="_blank">
-      <img src="https://img.buymeacoffee.com/button-api/?text=buy me a coffee&emoji=☕&slug=oslook&button_colour=ffda33&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=FFDD00&latest=2" width="160" alt="Buy Me a Coffee"/>
+      <img src="buymeacoffee.svg" width="160" alt="Buy Me a Coffee"/>
    </a>
 </p>
 
