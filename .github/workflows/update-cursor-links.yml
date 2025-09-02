@@ -45,7 +45,7 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          git add cursor_products
+          git add README.md version-history.json cursor_products
           if ! git diff --staged --quiet; then
              echo "changes=true" >> $GITHUB_OUTPUT
           fi
