@@ -1,6 +1,23 @@
 {
   "versions": [
     {
+      "version": "1.6.35",
+      "date": "2025-09-19",
+      "platforms": {
+        "darwin-universal": "https://downloads.cursor.com/production/b753cece5c67c47cb5637199a5a5de2b7100c18f/darwin/universal/Cursor-darwin-universal.dmg",
+        "darwin-x64": "https://downloads.cursor.com/production/b753cece5c67c47cb5637199a5a5de2b7100c18f/darwin/x64/Cursor-darwin-x64.dmg",
+        "darwin-arm64": "https://downloads.cursor.com/production/b753cece5c67c47cb5637199a5a5de2b7100c18f/darwin/arm64/Cursor-darwin-arm64.dmg",
+        "win32-x64-user": "https://downloads.cursor.com/production/b753cece5c67c47cb5637199a5a5de2b7100c18f/win32/x64/user-setup/CursorUserSetup-x64-1.6.35.exe",
+        "win32-arm64-user": "https://downloads.cursor.com/production/b753cece5c67c47cb5637199a5a5de2b7100c18f/win32/arm64/user-setup/CursorUserSetup-arm64-1.6.35.exe",
+        "win32-x64-system": "https://downloads.cursor.com/production/b753cece5c67c47cb5637199a5a5de2b7100c18f/win32/x64/system-setup/CursorSetup-x64-1.6.35.exe",
+        "win32-arm64-system": "https://downloads.cursor.com/production/b753cece5c67c47cb5637199a5a5de2b7100c18f/win32/arm64/system-setup/CursorSetup-arm64-1.6.35.exe",
+        "win32-x64": "https://downloads.cursor.com/production/b753cece5c67c47cb5637199a5a5de2b7100c18f/win32/x64/system-setup/CursorSetup-x64-1.6.35.exe",
+        "win32-arm64": "https://downloads.cursor.com/production/b753cece5c67c47cb5637199a5a5de2b7100c18f/win32/arm64/system-setup/CursorSetup-arm64-1.6.35.exe",
+        "linux-x64": "https://downloads.cursor.com/production/b753cece5c67c47cb5637199a5a5de2b7100c18f/linux/x64/Cursor-1.6.35-x86_64.AppImage",
+        "linux-arm64": "https://downloads.cursor.com/production/b753cece5c67c47cb5637199a5a5de2b7100c18f/linux/arm64/Cursor-1.6.35-aarch64.AppImage"
+      }
+    },
+    {
       "version": "1.6.27",
       "date": "2025-09-17",
       "platforms": {
@@ -1537,19 +1554,6 @@
         "win32-arm64": "https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/69ce6c261e430e5be69213f1e721e50142477715/win32/arm64/user-setup/CursorUserSetup-arm64-0.46.1.exe",
         "linux-x64": "https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/client/linux/x64/appimage/Cursor-0.46.1-69ce6c261e430e5be69213f1e721e50142477715.deb.glibc2.25-x86_64.AppImage",
         "linux-arm64": "https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/client/linux/arm64/appimage/Cursor-0.46.1-69ce6c261e430e5be69213f1e721e50142477715.deb.glibc2.28-aarch64.AppImage"
-      }
-    },
-    {
-      "version": "0.46.0",
-      "date": "2025-02-22",
-      "platforms": {
-        "darwin-universal": "https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/aff57e1d9a74ed627fb5bd393e347079514436a7/darwin/universal/Cursor-darwin-universal.dmg",
-        "darwin-x64": "https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/aff57e1d9a74ed627fb5bd393e347079514436a7/darwin/x64/Cursor-darwin-x64.dmg",
-        "darwin-arm64": "https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/aff57e1d9a74ed627fb5bd393e347079514436a7/darwin/arm64/Cursor-darwin-arm64.dmg",
-        "win32-x64": "https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/aff57e1d9a74ed627fb5bd393e347079514436a7/win32/x64/user-setup/CursorUserSetup-x64-0.46.0.exe",
-        "win32-arm64": "https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/aff57e1d9a74ed627fb5bd393e347079514436a7/win32/arm64/user-setup/CursorUserSetup-arm64-0.46.0.exe",
-        "linux-x64": "https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/client/linux/x64/appimage/Cursor-0.46.0-aff57e1d9a74ed627fb5bd393e347079514436a7.deb.glibc2.25-x86_64.AppImage",
-        "linux-arm64": "https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/client/linux/arm64/appimage/Cursor-0.46.0-aff57e1d9a74ed627fb5bd393e347079514436a7.deb.glibc2.28-aarch64.AppImage"
       }
     }
   ]
