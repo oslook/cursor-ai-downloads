@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://mintlify.s3-us-west-1.amazonaws.com/cursor/images/logo/app-logo.svg" alt="Cursor Icon" width="100"/>
+  <img width="300" height="75" alt="cursor" src="https://github.com/user-attachments/assets/799e140b-8259-47b6-aff8-1afd98acf822" />
 </p>
 
 <h1 align="center">Cursor AI's Official Download Links</h1>
