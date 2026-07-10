@@ -1,6 +1,23 @@
 {
   "versions": [
     {
+      "version": "3.11.13",
+      "date": "2026-07-10",
+      "platforms": {
+        "darwin-universal": "https://downloads.cursor.com/production/3f21b08f0b436a07be29fbfe00b304fa15553353/darwin/universal/Cursor-darwin-universal.dmg",
+        "darwin-x64": "https://downloads.cursor.com/production/3f21b08f0b436a07be29fbfe00b304fa15553353/darwin/x64/Cursor-darwin-x64.dmg",
+        "darwin-arm64": "https://downloads.cursor.com/production/3f21b08f0b436a07be29fbfe00b304fa15553353/darwin/arm64/Cursor-darwin-arm64.dmg",
+        "win32-x64-user": "https://downloads.cursor.com/production/3f21b08f0b436a07be29fbfe00b304fa15553353/win32/x64/user-setup/CursorUserSetup-x64-3.11.13.exe",
+        "win32-arm64-user": "https://downloads.cursor.com/production/3f21b08f0b436a07be29fbfe00b304fa15553353/win32/arm64/user-setup/CursorUserSetup-arm64-3.11.13.exe",
+        "win32-x64-system": "https://downloads.cursor.com/production/3f21b08f0b436a07be29fbfe00b304fa15553353/win32/x64/system-setup/CursorSetup-x64-3.11.13.exe",
+        "win32-arm64-system": "https://downloads.cursor.com/production/3f21b08f0b436a07be29fbfe00b304fa15553353/win32/arm64/system-setup/CursorSetup-arm64-3.11.13.exe",
+        "win32-x64": "https://downloads.cursor.com/production/3f21b08f0b436a07be29fbfe00b304fa15553353/win32/x64/system-setup/CursorSetup-x64-3.11.13.exe",
+        "win32-arm64": "https://downloads.cursor.com/production/3f21b08f0b436a07be29fbfe00b304fa15553353/win32/arm64/system-setup/CursorSetup-arm64-3.11.13.exe",
+        "linux-x64": "https://downloads.cursor.com/production/3f21b08f0b436a07be29fbfe00b304fa15553353/linux/x64/Cursor-3.11.13-x86_64.AppImage",
+        "linux-arm64": "https://downloads.cursor.com/production/3f21b08f0b436a07be29fbfe00b304fa15553353/linux/arm64/Cursor-3.11.13-aarch64.AppImage"
+      }
+    },
+    {
       "version": "3.10.20",
       "date": "2026-07-08",
       "platforms": {
@@ -1681,23 +1698,6 @@
         "win32-arm64": "https://downloads.cursor.com/production/4395cbb45916e730692e72c853b893578fbb0112/win32/arm64/system-setup/CursorSetup-arm64-2.2.12.exe",
         "linux-x64": "https://downloads.cursor.com/production/4395cbb45916e730692e72c853b893578fbb0112/linux/x64/Cursor-2.2.12-x86_64.AppImage",
         "linux-arm64": "https://downloads.cursor.com/production/4395cbb45916e730692e72c853b893578fbb0112/linux/arm64/Cursor-2.2.12-aarch64.AppImage"
-      }
-    },
-    {
-      "version": "2.2.9",
-      "date": "2025-12-10",
-      "platforms": {
-        "darwin-universal": "https://downloads.cursor.com/production/a86689c93e9fb11addfbefd29a6ec7c0a59175e7/darwin/universal/Cursor-darwin-universal.dmg",
-        "darwin-x64": "https://downloads.cursor.com/production/a86689c93e9fb11addfbefd29a6ec7c0a59175e7/darwin/x64/Cursor-darwin-x64.dmg",
-        "darwin-arm64": "https://downloads.cursor.com/production/a86689c93e9fb11addfbefd29a6ec7c0a59175e7/darwin/arm64/Cursor-darwin-arm64.dmg",
-        "win32-x64-user": "https://downloads.cursor.com/production/a86689c93e9fb11addfbefd29a6ec7c0a59175e7/win32/x64/user-setup/CursorUserSetup-x64-2.2.9.exe",
-        "win32-arm64-user": "https://downloads.cursor.com/production/a86689c93e9fb11addfbefd29a6ec7c0a59175e7/win32/arm64/user-setup/CursorUserSetup-arm64-2.2.9.exe",
-        "win32-x64-system": "https://downloads.cursor.com/production/a86689c93e9fb11addfbefd29a6ec7c0a59175e7/win32/x64/system-setup/CursorSetup-x64-2.2.9.exe",
-        "win32-arm64-system": "https://downloads.cursor.com/production/a86689c93e9fb11addfbefd29a6ec7c0a59175e7/win32/arm64/system-setup/CursorSetup-arm64-2.2.9.exe",
-        "win32-x64": "https://downloads.cursor.com/production/a86689c93e9fb11addfbefd29a6ec7c0a59175e7/win32/x64/system-setup/CursorSetup-x64-2.2.9.exe",
-        "win32-arm64": "https://downloads.cursor.com/production/a86689c93e9fb11addfbefd29a6ec7c0a59175e7/win32/arm64/system-setup/CursorSetup-arm64-2.2.9.exe",
-        "linux-x64": "https://downloads.cursor.com/production/a86689c93e9fb11addfbefd29a6ec7c0a59175e7/linux/x64/Cursor-2.2.9-x86_64.AppImage",
-        "linux-arm64": "https://downloads.cursor.com/production/a86689c93e9fb11addfbefd29a6ec7c0a59175e7/linux/arm64/Cursor-2.2.9-aarch64.AppImage"
       }
     }
   ]
