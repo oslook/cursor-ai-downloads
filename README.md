@@ -26,7 +26,7 @@
 ⭐️ Your star shines on us. Star us on GitHub!
 
 - [⚡️ Cursor Download Hub (cursor.uuid.site)](https://cursor.uuid.site) perform a quick search all version download link.
-- [🔥 Kilocode: Open Source Alternative to Cursor, Kiro and Windsurf](https://app.kilocode.ai/users/sign_up?referral-code=ffecf272-e720-4606-b878-f675d3c1a720)
+- [🔥 Get 50% off the first month of Cursor Pro / Pro+ / Ultra](https://github.com/oslook/cursor-referral-code)
 
 ---
 
