@@ -62,16 +62,6 @@ Use the official download links to access any older, stable version you prefer.
 
 Please refer to the [Official Link](https://www.cursor.com/changelog)
 
-### Key Features
-
-List some key features and the versions they were introduced in for reference when considering rollback or downgrade.
-
-1. Deepseek R1 and Deepseek v3 models supported (0.44.x ~)
-> You can enable them in Settings > Models. Cursor team self-host these models in the US.
-
-2. Integrate Claude 3.7 Sonnet (0.46.0 ~)
-> try to add `claude-3.7-sonnet-thinking` and `claude-3-7-sonnet-20250219` should work now.
-
 ## All Version Download Links
 
 > ⚠️ Security Notice
