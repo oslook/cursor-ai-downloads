@@ -26,8 +26,7 @@
 ⭐️ Your star shines on us. Star us on GitHub!
 
 - [⚡️ Cursor Download Hub (cursor.uuid.site)](https://cursor.uuid.site) perform a quick search all version download link.
-- [🔥 Get 50% off the first month of Cursor Pro / Pro+ / Ultra](https://github.com/oslook/cursor-referral-code)
-
+  
 ---
 
 ## 📖 Table of Contents
