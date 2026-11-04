@@ -22,8 +22,7 @@
 | :---: | --- | --- |
 | <a href="https://cursor.uuid.site/"><img src="https://cursor.uuid.site/favicon-32x32.png" height="32" alt="Cursor Download Hub logo"></a> | [**Cursor Download Hub**](https://cursor.uuid.site/) | Search the full archived Cursor version history. |
 | <a href="https://runable.link/david"><img src="https://runable.com/logo_v2_dark.png" height="32" alt="Runable logo"></a> | [**Runable**](https://runable.link/david) | An AI agent that turns prompts into websites, presentations, research reports, images, and videos. |
-| <a href="https://firecrawl.link/david-clzd"><img src="https://firecrawl.vercel.app/brand/firecrawl-light-logo.png" height="32" alt="Firecrawl logo"></a> | [**Firecrawl**](https://firecrawl.link/david-clzd) | A web data API for AI agents that searches the web, scrapes pages, and crawls websites. 🎁 New users get 10% off for their first purchase
- |
+| <a href="https://firecrawl.link/david-clzd"><img src="https://firecrawl.vercel.app/brand/firecrawl-logo.png" height="32" alt="Firecrawl logo"></a> | [**Firecrawl**](https://firecrawl.link/david-clzd) | A web data API for AI agents that searches the web, scrapes pages, and crawls websites. 🎁 New users get 10% off for their first purchase |
 
 
 ---
