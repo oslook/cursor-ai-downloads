@@ -39,8 +39,11 @@ jobs:
       - name: Run update script
         run: bun src/update-cursor-links.ts
 
-      - name: Run update script
-        run: ./scripts/download_all_cursors.sh version-history.json 
+      - name: Download product metadata for recent versions
+        run: |
+          recent_history="$RUNNER_TEMP/cursor-recent-versions.json"
+          jq '{versions: .versions[:100]}' version-history.json > "$recent_history"
+          ./scripts/download_all_cursors.sh "$recent_history"
 
       - name: Check for changes
         id: git-check

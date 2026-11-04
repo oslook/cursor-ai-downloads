@@ -295,84 +295,6 @@ function generateLatestVersionCard(version: string, date: string, results: Resul
 }
 
 /**
- * Generate the detailed version card content for a single version
- */
-function generateDetailedVersionCard(version: string, date: string, platforms: { [platform: string]: string }): string {
-  let cardContent = `\n<details>
-<summary><b>Version ${version}</b> (${date})</summary>
-
-<div align="center" style="padding: 20px; margin: 10px 0; border-radius: 5px;">
-<h3>Cursor ${version} Download Links</h3>
-
-#### Windows`;
-
-  // Add Windows downloads
-  if (platforms['win32-x64-user'] ) {
-    cardContent += `\n${generateDownloadBadge('win32-x64-user', platforms['win32-x64-user'] )}`;
-  }
-  if (platforms['win32-arm64-user'] ) {
-    cardContent += `\n${generateDownloadBadge('win32-arm64-user', platforms['win32-arm64-user'] )}`;
-  }
-  if (platforms['win32-x64-system'] ) {
-    cardContent += `\n${generateDownloadBadge('win32-x64-system', platforms['win32-x64-system'] )}`;
-  }
-  if (platforms['win32-arm64-system'] ) {
-    cardContent += `\n${generateDownloadBadge('win32-arm64-system', platforms['win32-arm64-system'] )}`;
-  }
-  if (platforms['win32-x64'] ) {
-    cardContent += `\n${generateDownloadBadge('win32-x64', platforms['win32-x64'] )}`;
-  }
-  if (platforms['win32-arm64'] ) {
-    cardContent += `\n${generateDownloadBadge('win32-arm64', platforms['win32-arm64'] )}`;
-  }
-
-  // Add macOS downloads
-  cardContent += `\n\n#### macOS`;
-  if (platforms['darwin-universal']) {
-    cardContent += `\n${generateDownloadBadge('darwin-universal', platforms['darwin-universal'])}`;
-  }
-  if (platforms['darwin-x64']) {
-    cardContent += `\n${generateDownloadBadge('darwin-x64', platforms['darwin-x64'])}`;
-  }
-  if (platforms['darwin-arm64']) {
-    cardContent += `\n${generateDownloadBadge('darwin-arm64', platforms['darwin-arm64'])}`;
-  }
-
-  // Add Linux downloads
-  cardContent += `\n\n#### Linux`;
-  if (platforms['linux-x64']) {
-    cardContent += `\n${generateDownloadBadge('linux-x64', platforms['linux-x64'])}`;
-  }
-  if (platforms['linux-arm64']) {
-    cardContent += `\n${generateDownloadBadge('linux-arm64', platforms['linux-arm64'])}`;
-  }
-
-  cardContent += `\n\n</div>
-</details>`;
-
-  return cardContent;
-}
-
-/**
- * Generate detailed cards for all versions
- */
-function generateAllDetailedCards(history: VersionHistory): string {
-  let allCards = '';
-
-  // Sort versions by version number (newest first)
-  const sortedVersions = [...history.versions].sort((a, b) => {
-    return b.version.localeCompare(a.version, undefined, { numeric: true });
-  });
-
-  // Generate cards for each version
-  for (const entry of sortedVersions) {
-    allCards += generateDetailedVersionCard(entry.version, entry.date, entry.platforms);
-  }
-
-  return allCards;
-}
-
-/**
  * Generate table row for a single version
  */
 function generateTableRow(version: string, date: string, platforms: { [platform: string]: string }): string {
@@ -413,7 +335,7 @@ function generateTableRow(version: string, date: string, platforms: { [platform:
 }
 
 /**
- * Generate the complete versions table
+ * Generate the README table for the 100 most recent versions
  */
 function generateVersionsTable(history: VersionHistory): string {
   let tableContent = `<!-- ALL_VERSIONS_TABLE_START -->
@@ -425,8 +347,7 @@ function generateVersionsTable(history: VersionHistory): string {
     return b.version.localeCompare(a.version, undefined, { numeric: true });
   });
 
-  // Generate rows for each version
-  for (const entry of sortedVersions) {
+  for (const entry of sortedVersions.slice(0, 100)) {
     tableContent += `\n${generateTableRow(entry.version, entry.date, entry.platforms)}`;
   }
 
@@ -524,12 +445,6 @@ async function updateReadme(): Promise<boolean> {
       return b.version.localeCompare(a.version, undefined, { numeric: true });
     });
 
-    // Limit history size to 100 entries to prevent unlimited growth
-    if (history.versions.length > 100) {
-      history.versions = history.versions.slice(0, 100);
-      console.log(`Truncated version history to 100 entries`);
-    }
-
     // Save the updated history JSON
     try {
       saveVersionHistory(history);
@@ -540,7 +455,7 @@ async function updateReadme(): Promise<boolean> {
     }
   }
 
-  // Now update the README with the complete history
+  // Update the README with recent versions from the archive
   const readmePath = path.join(process.cwd(), 'README.md');
   if (!fs.existsSync(readmePath)) {
     console.error('README.md file not found');
@@ -549,7 +464,6 @@ async function updateReadme(): Promise<boolean> {
 
   let readmeContent = fs.readFileSync(readmePath, 'utf8');
 
-  // Update the versions table with complete history
   const versionsTableRegex = /<!-- ALL_VERSIONS_TABLE_START -->[\s\S]*?<!-- ALL_VERSIONS_TABLE_END -->/;
   const versionsTable = generateVersionsTable(history);
   readmeContent = readmeContent.replace(versionsTableRegex, versionsTable);
@@ -559,15 +473,17 @@ async function updateReadme(): Promise<boolean> {
   const latestVersionCard = generateLatestVersionCard(history.versions[0].version, history.versions[0].date, results);
   readmeContent = readmeContent.replace(latestVersionCardRegex, latestVersionCard);
 
-  // Update the detailed version cards with all versions from history
-  const detailedCardsRegex = /<!-- DETAILED_CARDS_START -->[\s\S]*?<!-- DETAILED_CARDS_END -->/;
-  const allDetailedCards = generateAllDetailedCards(history);
-  readmeContent = readmeContent.replace(detailedCardsRegex, `<!-- DETAILED_CARDS_START -->${allDetailedCards}<!-- DETAILED_CARDS_END -->`);
+  // Leave room below GitHub's 500 KiB README rendering limit.
+  const maxReadmeBytes = 450 * 1024;
+  const readmeBytes = Buffer.byteLength(readmeContent, 'utf8');
+  if (readmeBytes > maxReadmeBytes) {
+    throw new Error(`README.md is ${readmeBytes} bytes and exceeds the ${maxReadmeBytes}-byte size budget`);
+  }
 
   // Save the updated README
   try {
     fs.writeFileSync(readmePath, readmeContent);
-    console.log(`README.md updated with complete version history`);
+    console.log('README.md updated with recent versions');
   } catch (error) {
     console.error('Error saving README:', error instanceof Error ? error.message : 'Unknown error');
     return false;
@@ -784,4 +700,4 @@ if (require.main === module) {
     console.error('Unhandled error:', error instanceof Error ? error.message : 'Unknown error');
     process.exit(1);
   });
-} 
+}
